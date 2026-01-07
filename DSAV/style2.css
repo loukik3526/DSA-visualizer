@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('data.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+  }
+  
+  .navbar {
+    padding: 15px 30px;
+    background-color: rgba(28, 28, 28, 1  );
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #4835c8, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .navbar ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .navbar ul li {
+    margin-left: 20px;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .navbar ul li a:hover {
+    color: #6A5ACD;
+  }
+  
+  .myCard {
+    display: inline flex;
+    background-color: transparent;
+    width: 260px;
+    height: 320px;
+    margin-top: 250px;
+    margin-left: 45px;
+    margin-right: 45px;
+    top: 50%;
+  }
+  
+  .myCard2 {
+    background-color: transparent;
+  
+    width: 190px;
+    height: 254px;
+  }
+  
+  .title {
+    font-size: 100%;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .innerCard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  
+  .myCard:hover .innerCard {
+    transform: rotateY(180deg);
+  }
+  
+  .frontSide,
+  .backSide {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid rgba(41, 39, 39, 0.8);
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0 0 0.3em rgba(8, 5, 5, 0.5);
+    font-weight: 700;
+  }
+  
+  .frontSide,
+  .frontSide::before {
+    background: linear-gradient(111deg, #432cdb,#4D3BC9);
+  }
+  
+  .frontSide {
+    font-size: 20px;
+    text-shadow:  #0D0E18 8px -7px 9px;
+    ;
+  }
+  
+  .backSide,
+  .backSide::before {
+    font: 500;
+    font-size: 100%;
+    background-image: #0D0E18;
+  }
+  
+  .backSide {
+    transform: rotateY(180deg);
+  }
+  
+  @keyframes animate {
+    0% {
+      opacity: 0.3;
+    }
+  
+    80% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0.3;
+    }
+  }
+  
+  .onclick {
+    height: 100%;
+    width: 100%;
+  }
+  
+  
+  
+  
